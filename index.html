@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上海去向备忘 · 事业编与资管运营跳槽</title>
+<style>
+  :root {
+    --ink: #1c1915;
+    --muted: #5c564c;
+    --line: #e4ddd2;
+    --paper: #f7f4ee;
+    --card: #fffdf9;
+    --accent: #8c3a2f;
+    --accent-soft: #f3e6e1;
+    --ok: #1f6b4a;
+    --ok-soft: #e7f3ec;
+    --warn: #8a5a12;
+    --warn-soft: #f8efd8;
+    --shadow: 0 1px 0 rgba(28, 25, 21, 0.04);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 480px at 10% -10%, #efe4d4 0%, transparent 55%),
+      var(--paper);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: #6d2b22; }
+  .firms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 4px;
+  }
+  .firms a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14.5px;
+    line-height: 1.45;
+  }
+  .firms a:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+  .firms a small {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 650;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 22px 80px; }
+  header.hero {
+    padding: 8px 0 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    margin: 0 0 10px;
+    letter-spacing: 0.16em;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  h1 {
+    margin: 0 0 12px;
+    font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+  .lede { margin: 0; max-width: 42em; color: var(--muted); font-size: 17px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    margin: 22px 0 8px;
+    padding: 0;
+    list-style: none;
+  }
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-size: 14px;
+  }
+  nav.toc a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+  section { margin-top: 42px; }
+  h2 {
+    margin: 0 0 8px;
+    font-family: "Songti SC", "Noto Serif SC", serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  h3 {
+    margin: 26px 0 8px;
+    font-size: 18px;
+    font-weight: 650;
+  }
+  p { margin: 0 0 12px; }
+  .note, .callout {
+    margin: 16px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+  .note strong, .callout strong { font-weight: 650; }
+  .callout.warn { background: var(--warn-soft); border-color: #ead7ae; }
+  .callout.ok { background: var(--ok-soft); border-color: #cfe3d6; }
+  ul { margin: 8px 0 14px; padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 14px 0 6px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px 12px;
+    box-shadow: var(--shadow);
+  }
+  .card h3 { margin: 0 0 8px; font-size: 16px; }
+  .card p, .card li { font-size: 14.5px; }
+  .card ul { margin-bottom: 0; }
+  .tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 8px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    background: #f3eee6;
+    font-weight: 650;
+    font-size: 13px;
+    color: #3d3832;
+  }
+  tr:last-child td { border-bottom: 0; }
+  td.fit { white-space: nowrap; color: var(--ok); font-weight: 600; }
+  .sources { font-size: 14px; color: var(--muted); }
+  .sources li { margin: 6px 0; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (max-width: 720px) {
+    h1 { font-size: 28px; }
+    .grid { grid-template-columns: 1fr; }
+    table { display: block; overflow-x: auto; }
+  }
+  @media print {
+    body { background: #fff; }
+    .wrap { max-width: none; padding: 0; }
+    a { color: #000; text-decoration: none; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 11px; color: #444; }
+    nav.toc { display: none; }
+    .card, table, .callout, .note { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="kicker">备忘 · 2026年10月23日</p>
+    <h1>上海去向备忘</h1>
+    <p class="lede">给已经毕业、正在工作的人。前半部分是事业单位公开招聘里竞争相对小、待遇还过得去的方向；后半部分是券商资管产品运营跳到上海时，可以投的机构、岗位，以及当天仍能打开的招聘页。</p>
+    <div class="meta">
+      <span class="pill">核对日期 2026-10-23</span>
+      <span class="pill">岗位为当日快照</span>
+      <span class="pill">投递前请再打开链接</span>
+    </div>
+    <nav class="toc" aria-label="目录">
+      <a href="#shiye">一、事业单位</a>
+      <a href="#paths">二、四类更值得盯的单位</a>
+      <a href="#pay">三、待遇大概在哪</a>
+      <a href="#rules">四、在职报考先核对</a>
+      <a href="#jobs">五、资管运营跳槽</a>
+      <a href="#openings">六、当天仍能对上的岗位</a>
+      <a href="#how">七、投递时怎么筛</a>
+    </nav>
+  </header>
+
+  <section id="shiye">
+    <h2>一、在职人员能报哪些事业单位</h2>
+    <p>已经工作的人，报上海事业单位里招聘对象写「不限」或「社会人员」的岗位。竞争小、待遇又还过得去的，主要是带专业和证书门槛的专技岗，以及市属、青浦、嘉定、松江、宝山、闵行、浦东非核心街镇这类单位。街镇综合岗最卷；远郊纯事务岗和工勤岗最冷，收入也更靠下。</p>
+    <p>2026年统考招 2468 人，约七成岗位只给应届生。劳动报援引培训机构统计，最终报名超过 9 万人，平均竞争比大约 37:1。最热的是浦东祝桥镇社区服务，329:1。同一年 10 月的第二批补招里，管理岗比专技岗更挤，研究生岗、党员岗比「不限」岗更松。市属、青浦、崇明的热度低于徐汇、虹口。</p>
+    <div class="callout warn">
+      <strong>补招窗口已经过去。</strong>
+      2026年第二批补招报名截止于 2026年10月23日 16:00，而且必须已经参加过 2026年3月28日的统考、成绩有效、还没被录用。没考过这场的，等 2027 年统考。往年是 1 月底出公告、2 月初报名。医院、学校、市属单位的自主招聘全年都有。
+    </div>
+  </section>
+
+  <section id="paths">
+    <h2>二、四类更值得盯的方向</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">01</span>
+        <h3>市属专技岗</h3>
+        <p>市水务局的信息安全、技术管理，市教育考试院的学科秘书，市民政局的网络管理，在 2026 年 10 月补招里一度接近无人报名。冷的原因是要求党员、研究生或一定工作年限。市属单位经费和公积金通常好于远郊街镇。计算机、水务工程、学科背景对得上的人，这是「冷且待遇不差」里最扎实的一块。</p>
+      </article>
+      <article class="card">
+        <span class="tag">02</span>
+        <h3>区级会计、工程、生态环境、信息化</h3>
+        <p>财务会计、审计、工程造价、规划建设、环境监测、网络安全，专业一对就把大部分人挡在外面。优先看嘉定、松江、闵行、宝山、青浦和浦东非陆家嘴、非世博板块。这些区财政好于崇明、金山的一般乡镇，竞争又低于徐汇、黄浦的街镇岗。</p>
+      </article>
+      <article class="card">
+        <span class="tag">03</span>
+        <h3>紧缺学科教师</h3>
+        <p>公办教师多数走区里单独招聘，全年都有公告，社会人员可以报。物理、化学、信息技术、特殊教育、中职专业课，比语文、英语松。上海教师属于待遇较稳的事业编，职称和公积金跟着走。浦东 2027 年第一批写明：应聘南汇新城公办学校的外省市户籍社会人员，可以不受居住证满一年的限制。</p>
+      </article>
+      <article class="card">
+        <span class="tag">04</span>
+        <h3>有执业资格的卫生专技</h3>
+        <p>社区卫生、疾控、妇幼、精神卫生、院感、医技、护理，医院和卫健系统常年单独招，比一年一次的统考更适合在职的人。临床热门科室不冷；基层公卫和上述专技相对好进。公立医院是差额拨款，忙的科室收入可以高于普通全额事业编；疾控和社区卫生更稳，上限低一些。</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pay">
+    <h2>三、待遇大概在什么位置</h2>
+    <p>上海没有一份对所有事业编通用的年薪表。同一区里，全额和差额、专技和管理会差一截。市场里常被引用的区间是：区级全额单位新人年全包大约 14 万到 20 万，中心城区和财政好的区偏上，崇明、金山、奉贤一般乡镇偏下。教师多在这个区间的中上。有业务量的公立医院临床可以再高，夜班和强度也上去。</p>
+    <p>选岗时看简章里的经费形式。全额拨款，例如中小学、疾控、档案馆、水务技术、考试院一类，工资稳。差额拨款，例如公立医院、部分高校，下限有财政，上限看单位效益。</p>
+    <div class="note">
+      各区「储备人才」年薪常见 16 万到 24 万，但多数先签区属企业合同。金山、奉贤、闵行、嘉定等部分项目，考核合格后才可能进事业编，而且主要面向近年高校毕业生。它不是直接的事业编。
+    </div>
+  </section>
+
+  <section id="rules">
+    <h2>四、在职报考先核对这几条</h2>
+    <ul>
+      <li>毕业证落款是 2025 年或 2026 年，并且还没有编制内工作的，仍可以按应届生报，能报的岗位会多出一大块。更早毕业，或者已经在编的，按社会人员。</li>
+      <li>外省市户籍的社会人员，要有有效期内、满一年的上海居住证。2026 年这批计算截止到 2026 年 12 月 31 日。</li>
+      <li>年龄常见上限 35 周岁，硕士、博士和部分专技岗放到 38 或 40 周岁。简章写「40 周岁」时，按官方口径是 1986 年 1 月 1 日以后出生，以此类推。</li>
+      <li>写了最低工作年限的岗位，年限可以跨单位累计，截止时间一般是当年 12 月 31 日。有对口经历是优势。</li>
+      <li>自学考试、成人教育、网络教育按社会人员，不能用应届身份。</li>
+    </ul>
+    <p>统考和补招都在随申办市民云搜「事业单位集中公开招聘」，公告挂在 <a href="https://rsj.sh.gov.cn/">上海市人力资源和社会保障局</a>。报之前用简章里的咨询电话跟单位确认专业目录和证书认不认。上海实行告知承诺制，条件不符会在资格复审被刷。</p>
+  </section>
+
+  <section id="jobs">
+    <h2>五、券商资管产品运营，跳到上海投哪里</h2>
+    <p>券商资管的产品运营，最对口的是产品全生命周期、账户、备案信披、注册登记（TA），以及估值核算、资金清算、托管外包。纯销售和互联网「产品运营」是另一条路。</p>
+    <p>头部公募和券商资管的运营编制少，公开在招的岗位不多，大量需求在猎头匿名单里。下面按机构类型列公司。在招情况按 2026 年 10 月 23 日能打开的猎聘、领英页面核对。页面没写「已暂停」只说明当时还能投，名额以打开链接的当天为准。</p>
+    <p>公司名点进去是招聘入口，不代表当时有对口岗位。标「集团」的，子公司没有单独招聘站，走母公司招聘官网。标「官网」的，公开页面上没有独立招聘系统，职位可能在站内「加入我们」，也可能只走猎头。链接按 2026 年 10 月 23 日能打开的官网核对。</p>
+
+    <h3>券商资管，工作内容最接近</h3>
+    <div class="firms">
+      <a href="https://wecruit.hotjob.cn/SU6419745cbef57c635fe10142/pb/index.html" target="_blank" rel="noopener">华泰证券资管<small>集团</small></a>
+      <a href="https://www.dfham.com/dfhong/career/index.html" target="_blank" rel="noopener">东方证券资管（东方红）</a>
+      <a href="https://hr.gtht.com/" target="_blank" rel="noopener">国泰海通资管</a>
+      <a href="https://wecruit.hotjob.cn/SU60613f74bef57c36adc66d0b/pb/index.html" target="_blank" rel="noopener">财通资管<small>集团</small></a>
+      <a href="https://zts.hotjob.cn/" target="_blank" rel="noopener">中泰资管<small>集团</small></a>
+      <a href="https://www.i618.com.cn/" target="_blank" rel="noopener">山证资管<small>官网</small></a>
+      <a href="https://ebscn.zhiye.com/social/jobs" target="_blank" rel="noopener">光大证券资管</a>
+      <a href="https://www.swhysc.com/swhysc/joinus" target="_blank" rel="noopener">申万宏源资管</a>
+      <a href="https://xyzq.hotjob.cn/" target="_blank" rel="noopener">兴证资管<small>集团</small></a>
+      <a href="https://app.mokahr.com/social-recruitment/cnhbstock/92083#/" target="_blank" rel="noopener">华宝证券资管</a>
+      <a href="https://zhaopin.eastmoney.com/" target="_blank" rel="noopener">东方财富证券资管<small>集团</small></a>
+      <a href="https://cicc.zhiye.com/social/jobs" target="_blank" rel="noopener">中金资管上海团队</a>
+      <a href="https://careers.citics.com/" target="_blank" rel="noopener">中信证券资管上海团队</a>
+    </div>
+
+    <h3>公募基金，总部在上海</h3>
+    <div class="firms">
+      <a href="https://htffund.zhiye.com/social/jobs" target="_blank" rel="noopener">汇添富</a>
+      <a href="https://www.huaan.com.cn/joinus.html" target="_blank" rel="noopener">华安</a>
+      <a href="https://www.fullgoal.com.cn/" target="_blank" rel="noopener">富国<small>官网</small></a>
+      <a href="https://zofund.zhiye.com/social/jobs" target="_blank" rel="noopener">中欧</a>
+      <a href="https://www.xqfunds.com/gywm/index.html?m=cpjm" target="_blank" rel="noopener">兴证全球</a>
+      <a href="https://jysld.zhiye.com/social/jobs" target="_blank" rel="noopener">交银施罗德</a>
+      <a href="https://maxwealthfund.hotjob.cn/" target="_blank" rel="noopener">永赢</a>
+      <a href="https://www.fsfund.com/knowHb/joinUs.shtml" target="_blank" rel="noopener">华宝</a>
+      <a href="https://gtfund.zhiye.com/social/jobs" target="_blank" rel="noopener">国泰</a>
+      <a href="https://www.huatai-pb.com/" target="_blank" rel="noopener">华泰柏瑞<small>官网</small></a>
+      <a href="https://www.bocim.com/Channel/3673" target="_blank" rel="noopener">中银</a>
+      <a href="https://www.boscam.com.cn/" target="_blank" rel="noopener">上银<small>官网</small></a>
+      <a href="https://www.dongcaijijin.com/aboutus/job" target="_blank" rel="noopener">东财基金</a>
+      <a href="https://www.cifm.com/" target="_blank" rel="noopener">摩根基金<small>官网</small></a>
+      <a href="https://www.epf.com.cn/" target="_blank" rel="noopener">光大保德信<small>官网</small></a>
+      <a href="https://www.abc-ca.com/" target="_blank" rel="noopener">农银汇理<small>官网</small></a>
+      <a href="https://www.py-axa.com/aboutUs?code=4" target="_blank" rel="noopener">浦银安盛</a>
+      <a href="https://wjasset.zhiye.com/social/jobs" target="_blank" rel="noopener">万家</a>
+      <a href="https://www.dbfund.com.cn/rczp/shzp/index.html" target="_blank" rel="noopener">德邦</a>
+      <a href="https://www.xyamc.com/" target="_blank" rel="noopener">鑫元<small>官网</small></a>
+      <a href="https://www.zhfund.com/aboutus/job/sh/index.html" target="_blank" rel="noopener">中海</a>
+      <a href="https://www.cxfund.com.cn/" target="_blank" rel="noopener">长信<small>官网</small></a>
+      <a href="https://www.ctfund.com/" target="_blank" rel="noopener">财通基金<small>官网</small></a>
+      <a href="https://www.cpicfunds.com/aboutUs/joinUs.shtml" target="_blank" rel="noopener">国联安</a>
+      <a href="https://www.nuodefund.com/" target="_blank" rel="noopener">诺德<small>官网</small></a>
+      <a href="https://www.taipingfund.com.cn/company/cpyc/index.html" target="_blank" rel="noopener">太平基金</a>
+      <a href="https://www.citicprufunds.com.cn/pc/joinwe/" target="_blank" rel="noopener">中信保诚</a>
+      <a href="https://www.hexaamc.com/front/common_100256.jhtml" target="_blank" rel="noopener">蜂巢</a>
+      <a href="https://www.rosefinch.cn/" target="_blank" rel="noopener">朱雀<small>官网</small></a>
+    </div>
+
+    <h3>银行理财子</h3>
+    <p>理财子运营偏产品参数、发行、信披和系统维护。兴银理财、招银理财在上海有办公室。</p>
+    <div class="firms">
+      <a href="https://job.bankcomm.com/" target="_blank" rel="noopener">交银理财<small>集团</small></a>
+      <a href="https://job.spdb.com.cn/" target="_blank" rel="noopener">浦银理财<small>集团</small></a>
+      <a href="https://www.boscwm.cn/" target="_blank" rel="noopener">上银理财<small>官网</small></a>
+      <a href="https://www.citic-wealth.com/yymk/gywm/jrwm/" target="_blank" rel="noopener">信银理财</a>
+      <a href="https://www.schroderbwm.com/" target="_blank" rel="noopener">施罗德交银理财<small>官网</small></a>
+      <a href="https://www.amundibocwm.com/" target="_blank" rel="noopener">汇华理财<small>官网</small></a>
+      <a href="https://www.blackrockccbwealth.com/" target="_blank" rel="noopener">贝莱德建信理财<small>官网</small></a>
+      <a href="https://job.cib.com.cn/portal/" target="_blank" rel="noopener">兴银理财<small>集团</small></a>
+      <a href="https://career.cmbchina.com/" target="_blank" rel="noopener">招银理财<small>集团</small></a>
+    </div>
+
+    <h3>保险资管、信托</h3>
+    <p>产品形态和券商资管接近，信披和账户规则不同。</p>
+    <div class="firms">
+      <a href="https://www.cpic.com.cn/aboutUs/rlzy/ygzp/" target="_blank" rel="noopener">太平洋资管<small>集团</small></a>
+      <a href="https://www.cntaiping.com/" target="_blank" rel="noopener">太平资管<small>集团</small></a>
+      <a href="https://talent.pingan.com/" target="_blank" rel="noopener">平安资管上海</a>
+      <a href="https://www.shanghaitrust.com/" target="_blank" rel="noopener">上海信托<small>官网</small></a>
+      <a href="https://www.hwabaotrust.com/joblist.jspx" target="_blank" rel="noopener">华宝信托</a>
+      <a href="https://www.zhtrust.com/gywm/rczp/" target="_blank" rel="noopener">中海信托</a>
+    </div>
+
+    <h3>托管、基金服务外包</h3>
+    <p>岗位名多是估值核算、注册登记、资金清算。</p>
+    <div class="firms">
+      <a href="https://career.cmbchina.com/" target="_blank" rel="noopener">招商银行</a>
+      <a href="https://job.icbc.com.cn/pc/index.html" target="_blank" rel="noopener">工商银行</a>
+      <a href="https://job.spdb.com.cn/" target="_blank" rel="noopener">浦发银行</a>
+      <a href="https://job.bankcomm.com/" target="_blank" rel="noopener">交通银行</a>
+      <a href="https://job.cib.com.cn/portal/" target="_blank" rel="noopener">兴业银行</a>
+      <a href="https://hr.gtht.com/" target="_blank" rel="noopener">国泰海通</a>
+      <a href="https://cms.hotjob.cn/" target="_blank" rel="noopener">招商证券</a>
+      <a href="https://wecruit.hotjob.cn/SU6419745cbef57c635fe10142/pb/index.html" target="_blank" rel="noopener">华泰</a>
+      <a href="https://careers.citics.com/" target="_blank" rel="noopener">中信</a>
+      <a href="https://cicc.zhiye.com/social/jobs" target="_blank" rel="noopener">中金</a>
+      <a href="https://zhaopin.eastmoney.com/" target="_blank" rel="noopener">东方财富证券</a>
+    </div>
+
+    <h3>代销和私募</h3>
+    <p>基煜、天天基金、好买、盈米、长量做产品准入和柜台运营。私募里一个人往往覆盖设立、备案、申赎、信披。薪资和稳定性差得比较大。</p>
+    <div class="firms">
+      <a href="https://www.jigoutong.com/career/" target="_blank" rel="noopener">基煜</a>
+      <a href="https://zhaopin.eastmoney.com/" target="_blank" rel="noopener">天天基金<small>集团</small></a>
+      <a href="https://www.howbuy.com/about/joinhowbuy.html" target="_blank" rel="noopener">好买</a>
+      <a href="https://yingmi.zhiye.com/social" target="_blank" rel="noopener">盈米</a>
+      <a href="https://www.erichfund.com/" target="_blank" rel="noopener">长量<small>官网</small></a>
+      <a href="https://join.mhfunds.com/" target="_blank" rel="noopener">明汯</a>
+      <a href="https://www.ubiquant.com/website/join" target="_blank" rel="noopener">九坤</a>
+      <a href="https://www.lingjuninvest.com/overview" target="_blank" rel="noopener">灵均</a>
+      <a href="https://yanfuinvestments1.zhiye.com/" target="_blank" rel="noopener">衍复</a>
+      <a href="https://www.jqinvestments.com/careers" target="_blank" rel="noopener">佳期</a>
+      <a href="https://www.mxifund.com/career" target="_blank" rel="noopener">蒙玺</a>
+      <a href="https://gyasset.hotjob.cn/" target="_blank" rel="noopener">高毅</a>
+      <a href="https://www.greenwoodsasset.com.cn/" target="_blank" rel="noopener">景林<small>官网</small></a>
+      <a href="http://www.chongyang.net/" target="_blank" rel="noopener">重阳<small>官网</small></a>
+    </div>
+  </section>
+
+  <section id="openings">
+    <h2>六、2026年10月23日仍能对上的岗位</h2>
+    <p>下表是当天页面仍在、且和资管产品运营相关的公开职位。薪资是招聘页上的区间，不是录用承诺。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>公司</th>
+          <th>岗位</th>
+          <th>条件与更新</th>
+          <th>薪资</th>
+          <th>匹配点</th>
+          <th>页面</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>东方财富证券</td>
+          <td>资产管理总部-运营岗</td>
+          <td>徐汇，本科，1年以上。10月15日更新，当天 HR 在线</td>
+          <td>15–25k</td>
+          <td class="fit">最接近</td>
+          <td><a href="https://www.liepin.com/job/1984266829.shtml">猎聘</a></td>
+        </tr>
+        <tr>
+          <td>东方财富证券</td>
+          <td>会计核算岗-托管业务</td>
+          <td>静安，本科。9月22日更新</td>
+          <td>15–25k · 16薪</td>
+          <td>估值、托管协议、信披数据</td>
+          <td><a href="https://www.liepin.com/job/1984085167.shtml">猎聘</a></td>
+        </tr>
+        <tr>
+          <td>中泰证券（上海）资管</td>
+          <td>基金估值</td>
+          <td>浦东，统招本科，3年以上，要上晚班。8月24日发布，10月19日页面仍在</td>
+          <td>11–19k</td>
+          <td>估值对账、头寸、定期报告</td>
+          <td><a href="https://www.liepin.com/job/1985089979.shtml">猎聘</a></td>
+        </tr>
+        <tr>
+          <td>中银基金</td>
+          <td>基金会计</td>
+          <td>上海，本科，1年以上。领英近几日仍显示在招</td>
+          <td>约 1–1.3 万/月</td>
+          <td>清算、净值、信披、账户</td>
+          <td><a href="https://cn.linkedin.com/jobs/view/%E5%9F%BA%E9%87%91%E4%BC%9A%E8%AE%A1-at-bank-of-china-investment-management-4477759597">领英</a></td>
+        </tr>
+        <tr>
+          <td>山证（上海）资管</td>
+          <td>公募电商运营</td>
+          <td>浦东，硕士，3–5年。9月28日更新</td>
+          <td>10–30k · 24薪</td>
+          <td>蚂蚁、天天基金的上架和活动，偏渠道</td>
+          <td><a href="https://www.liepin.com/job/1985883929.shtml">猎聘</a></td>
+        </tr>
+        <tr>
+          <td>基煜基金</td>
+          <td>私募产品运营 / 高级私募运营经理</td>
+          <td>上海。猎聘列表当天仍能看到</td>
+          <td>14–22k · 16薪；高级岗 20–35k · 16薪</td>
+          <td>私募合同、准入、上架，代销方视角</td>
+          <td><a href="https://www.liepin.com/city-sh/zpsmjjcpyyg7so3/">列表</a></td>
+        </tr>
+        <tr>
+          <td>蒙玺投资</td>
+          <td>基金产品运营</td>
+          <td>上海。猎聘列表可见</td>
+          <td>15–25k</td>
+          <td>小私募全流程运营</td>
+          <td><a href="https://www.liepin.com/city-sh/zpjjcpyy7s3k/">列表</a></td>
+        </tr>
+        <tr>
+          <td>国泰海通证券上海青浦分公司</td>
+          <td>智能理财（基金产品运营）</td>
+          <td>猎聘列表可见，公司名公开</td>
+          <td>25–40k</td>
+          <td>偏财富端产品运营，先看职责再投</td>
+          <td><a href="https://www.liepin.com/city-sh/zpjjcpyy7s3k/">列表</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <strong>猎头匿名单里还有更贴的岗位。</strong>
+      券商资管产品运营经理约 22–28k · 18 薪；国有券商私募 FOF 基金运营产品经理 24–35k · 16 薪；注册登记 30–50k · 18 薪；信披与基金审计 50–70k · 15 薪。其中一条写明「券商资管-产品运营经理」的猎聘职位，当天已经暂停。这类岗招完就下。
+    </div>
+    <div class="callout warn">
+      <strong>这几条当天已经不宜再当在招。</strong>
+      华泰资管的运营经理（账户、合同、募集设立、协会备案）在聚合网站上的截止日期是 2026 年 6 月 20 日。施罗德交银理财的产品运营外包岗已超过 90 天未更新。诺德基金的基金会计助理只要 2026 届应届硕士。
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>七、投递时怎么筛</h2>
+    <p>猎聘、BOSS 直聘用这几个词：资管运营、产品生命周期、账户管理、注册登记、基金会计、估值核算、资金清算。只搜「产品运营」会出来大量互联网岗。</p>
+    <p>有证券从业、基金从业的，简历里写清合同审核、设立备案、开户、申赎清算、分红、信披、托管对接。估值岗通常要会计基础，还可能要晚班。注册登记和信披在大公募的上限更高。</p>
+    <p class="sources">主要出处：上海市人力资源和社会保障局 2026 年事业单位公开招聘公告及第二批补招公告；劳动报对 2026 年统考报名规模的报道；上海中公教育对 2026 年 10 月第二批补招报名进度的整理；猎聘、领英上列名公司的职位页。待遇区间来自公开讨论和招聘页，各单位当年实际发放以合同和工资单为准。</p>
+  </section>
+
+  <footer>
+    整理日期 2026年10月23日。公司名链到当天核对过的招聘官网或集团招聘站。页面可直接转发。打印或另存为 PDF 时，链接会附在文字后面。
+  </footer>
+</div>
+</body>
+</html>
